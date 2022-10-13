@@ -19,6 +19,12 @@ class Solution(object):
             maxGap = max(maxGap, minBucket[i] - prev)
             prev = maxBucket[i]
         return maxGap
+           if (min == max) return 0; // All elements are the same
+        int bucketSize = (int) Math.ceil((double) (max - min) / (n - 1));
+        int[] minBucket = new int[n];
+        int[] maxBucket = new int[n];
+        Arrays.fill(minBucket, Integer.MAX_VALUE);
+        Arrays.fill(maxBucket, Integer.MIN_VALUE)
 
 
 
