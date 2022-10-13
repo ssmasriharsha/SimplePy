@@ -12,13 +12,6 @@ class Solution(object):
             minBucket[idx] = min(minBucket[idx], x)
             maxBucket[idx] = max(maxBucket[idx], x)
 
-        maxGap = bucketSize  # Maximum gap is always greater or equal to bucketSize
-        prev = maxBucket[0]  # We always have 0th bucket
-        for i in range(1, n):
-            if minBucket[i] == math.inf: continue  # Skip empty bucket
-            maxGap = max(maxGap, minBucket[i] - prev)
-            prev = maxBucket[i]
-        return maxGap
 
 
 if __name__ == '__main__':
